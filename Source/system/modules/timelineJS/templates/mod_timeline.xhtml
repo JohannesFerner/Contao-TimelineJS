@@ -1,0 +1,22 @@
+<!-- indexer::stop -->
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+<?php if ($this->headline): ?>
+
+<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+<?php endif; ?>
+<div id="timeline-embed"></div>
+    <script type="text/javascript">
+        var timeline_config = {
+            width:              '<?php echo ($this->width['value'] . $this->width['unit']); ?>',
+            height:             '<?php echo ($this->height['value'] . $this->height['unit']); ?>',
+            start_at_slide:     '0',
+            source:             '<?php echo $this->JsonURL ?>',
+            embed_id:           'timeline-embed',               //OPTIONAL USE A DIFFERENT DIV ID FOR EMBED
+            js:                 'system/modules/timelineJS/assets/tjs/compiled/js/timeline-min.js?2.17',
+            css:                'system/modules/timelineJS/assets/tjs/compiled/css/timeline.css?2.17'
+        }
+    </script>
+<script type="text/javascript" src="system/modules/timelineJS/assets/tjs/compiled/js/storyjs-embed.js"></script>
+
+</div>
+<!-- indexer::continue -->
