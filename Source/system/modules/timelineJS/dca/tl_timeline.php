@@ -30,12 +30,12 @@ $GLOBALS['TL_DCA']['tl_timeline'] = array
 			'mode'                    => 1,
 			'fields'                  => array('title'),
 			'flag'                    => 1,
-			'panelLayout'             => 'filter;search,limit'
+			'panelLayout'             => 'filter;search,limit',
 		),
 		'label' => array
 		(
 			'fields'                  => array('title'),
-			'format'                  => '%s'
+			'format'                  => '<strong>%s</strong>'
 		),
 		'global_operations' => array
 		(

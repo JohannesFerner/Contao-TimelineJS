@@ -18,6 +18,7 @@ class TimelineModule extends \Contao\Module {
            ->execute($this->timelineID);
         $data = $row->fetchAllAssoc();
         
+        \FilesModel::findByPk(3);
         
         $width = deserialize($this->timelineWidth);
         $height = deserialize($this->timelineHeight);
