@@ -10,9 +10,9 @@ namespace Timeline;
  *
  * @author Johannes
  */
-class TimelineAjax extends \Contao\Controller {
+class TimelineAjax extends \Controller {
     
-    public static function getAssetFromFileID($id,$lang='de')
+    public function getAssetFromFileID($id,$lang='de')
     {
         $image = \FilesModel::findById($id);
         $arrMeta = (array) deserialize($image->meta);

@@ -65,7 +65,7 @@ class NewsArchiveProvider extends AbstractDataProvider {
         while($news->next())
         {
             $thumbnail = \Timeline\NewsArchiveProvider::getThumbnail($news->current(),$param,$this);
-            $readmore = '</br></br><a class="timeline readmore" href="'. \Environment::get('url') . \Environment::get('path') .'/{{news_url::'.$news->current()->id.'}}">'.$GLOBALS['TL_LANG']['tl_timeline_datasource']['readMore'].'</a>';
+            $readmore = '</br></br><a class="timeline readmore" href="{{news_url::'.$news->current()->id.'}}">'.$GLOBALS['TL_LANG']['tl_timeline_datasource']['readMore'].'</a>';
             
             $date = array(
             'startDate' => date('Y,m,d',$news->current()->date),
@@ -76,7 +76,8 @@ class NewsArchiveProvider extends AbstractDataProvider {
             
             if($news->current()->addImage == 1)
             {
-                $date['asset'] = \Timeline\TimelineAjax::getAssetFromFileID($news->current()->singleSRC);
+                $timeline = new \Timeline\TimelineAjax();
+                $date['asset'] = $timeline->getAssetFromFileID($news->current()->singleSRC);
                 if($news->current()->caption != null){                
                     $date['asset']['caption'] = $this->restoreBasicEntities($news->current()->caption);
                 }
