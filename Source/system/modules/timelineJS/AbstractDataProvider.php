@@ -10,10 +10,9 @@ namespace Timeline;
  *
  * @author Johannes
  */
-abstract class AbstractDataProvider extends \Contao\Controller {
+abstract class AbstractDataProvider extends \Controller {
     abstract function getTypeString();
     abstract function getParentViewLabel($arrRow);
     abstract function getTimelineEntries($param);
 }
 
-?>

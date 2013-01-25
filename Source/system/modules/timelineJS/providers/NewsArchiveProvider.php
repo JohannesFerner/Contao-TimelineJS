@@ -61,11 +61,17 @@ class NewsArchiveProvider extends AbstractDataProvider {
         
         $dates = array();
         $this->loadLanguageFile('tl_timeline_datasource');
+        $this->loadLanguageFile('MSC');
         
         while($news->next())
         {
             $thumbnail = \Timeline\NewsArchiveProvider::getThumbnail($news->current(),$param,$this);
-            $readmore = '</br></br><a class="timeline readmore" href="{{news_url::'.$news->current()->id.'}}">'.$GLOBALS['TL_LANG']['tl_timeline_datasource']['readMore'].'</a>';
+            if(empty($param['newsReadMore'])){ 
+                $readmoreText = 'Weiterlesen...'; } 
+                else {
+                $readmoreText = $param['newsReadMore']; 
+                }
+            $readmore = '</br><i class="icon-share-alt"></i> <a class="timeline readmore '.$param['newsReadMoreClass'].'"  href="{{news_url::'.$news->current()->id.'}}">'.$readmoreText.'</a>';
             
             $date = array(
             'startDate' => date('Y,m,d',$news->current()->date),

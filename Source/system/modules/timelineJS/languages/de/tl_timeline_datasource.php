@@ -18,6 +18,10 @@ $GLOBALS['TL_LANG']['tl_timeline_datasource']['twitterUrl'][1]="Bitte geben Sie 
 
 $GLOBALS['TL_LANG']['tl_timeline_datasource']['newsArchive'][0]="Nachrichtenarchiv";
 $GLOBALS['TL_LANG']['tl_timeline_datasource']['newsArchive'][1]="Bitte wählen Sie das gewünschte News-Archiv aus";
+$GLOBALS['TL_LANG']['tl_timeline_datasource']['newsReadMore'][0]="Weiterlesen Text";
+$GLOBALS['TL_LANG']['tl_timeline_datasource']['newsReadMore'][1]="Definieren Sie ihren eigenen weiterlesen Text";
+$GLOBALS['TL_LANG']['tl_timeline_datasource']['newsReadMoreClass'][0]="Weiterlesen CSS-Klasse";
+$GLOBALS['TL_LANG']['tl_timeline_datasource']['newsReadMoreClass'][1]="Definieren Sie ihre CSS Klassen für den Link";
 $GLOBALS['TL_LANG']['tl_timeline_datasource']['onlyFeaturesNews'][0] ="Nur hervorgehobene Beiträge";
 $GLOBALS['TL_LANG']['tl_timeline_datasource']['onlyFeaturesNews'][1] ='Wählen Sie diese Option um nur hervorgehobene (featured) Beiträge in der Timeline anzuzeigen';
 

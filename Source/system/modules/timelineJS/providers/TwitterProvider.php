@@ -30,20 +30,6 @@ class TwitterProvider extends AbstractDataProvider {
             );
         $date['asset'] = \Timeline\TimelineAjax::getAssetFromFileID($data['0']['singleSRC']);
         $dates[] = $date;
-        
-        
-                
-//        $row = $this->Database->prepare('Select * FROM tl_timeline_datasource WHERE pid=?')
-//           ->execute($id);
-//        $sources = $row->fetchAllAssoc();
-//        
-//        var_dump($sources);
-//        
-//        foreach ($sources as $key => $value) {
-//            
-//        }
-        
-        
         return $dates;
     }
 }

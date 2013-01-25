@@ -65,7 +65,7 @@ $GLOBALS['TL_DCA']['tl_timeline_datasource'] = array
 	(
 		'__selector__'      => array('type','overwriteIcon','dp_asset'),
 		'default'           => '{type_legend},type,',
-                'newsArchive'       => '[type_legend},type;{newsArchive_legend},newsArchive,onlyFeaturesNews,{icon_legend},overwriteIcon;',
+                'newsArchive'       => '[type_legend},type;{newsArchive_legend},newsArchive,newsReadMore,newsReadMoreClass,onlyFeaturesNews,{icon_legend},overwriteIcon;',
                 'twitter'           => '{type_legend},type;{twitter_legend},twitterUrl',
                 'datapoint'         => '{type_legend},type;{datapoint_legend},dp_startDate,dp_endDate,dp_headline,dp_text,dp_asset,{icon_legend},overwriteIcon;'
 	),
@@ -110,6 +110,20 @@ $GLOBALS['TL_DCA']['tl_timeline_datasource'] = array
                         'options_callback'        => array('tl_module_news', 'getNewsArchives'),
                         'eval'                    => array('mandatory'=>true),
                         'sql'                     => "varchar(255) NOT NULL default ''"
+                ),
+                'newsReadMore' => array
+                (
+                        'label'                   => &$GLOBALS['TL_LANG']['tl_timeline_datasource']['newsReadMore'],
+                        'inputType'               => 'text',
+                        'eval'                    => array('mandatory'=>false ),
+                        'sql'                     => "varchar(255) NOT NULL default ''",
+                ),
+                'newsReadMoreClass' => array
+                (
+                        'label'                   => &$GLOBALS['TL_LANG']['tl_timeline_datasource']['newsReadMoreClass'],
+                        'inputType'               => 'text',
+                        'eval'                    => array('mandatory'=>false, 'allowHtml' => true, 'decodeEntities' => false, 'preserveTags' => true ),
+                        'sql'                     => "varchar(255) NOT NULL default ''",
                 ),
                 'onlyFeaturesNews' => array 
                 (
