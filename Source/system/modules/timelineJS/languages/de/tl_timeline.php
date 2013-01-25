@@ -4,12 +4,11 @@
  * Languages
  */
 
-$GLOBALS['TL_LANG']['tl_timeline']['language'] = array('de' =>'German','en' => 'English','fr' => 'French','es' => 'Spanish','it' => 'Italian','pt' => 'Portuguese','pt-br' => 'Brazilian Portuguese','nl' => 'Dutch','is' => 'Icelandic','no' => 'Norwegian','bg' => 'Bulgarian','sl' => 'Slovenian','hu' => 'Hungarian','hy' => 'Armenian','fo' => 'Faroese','cz' => 'Czech','dk' => 'Danish','id' => 'Indonesian','pl' => 'Polish','ru' => 'Russian','sk' => 'Slovak','ca' => 'Catalan','el' => 'Greek','ta' => 'Tamil','tl' => 'Tagalog','tr' => 'Turkish','ja' => 'Japanese','kr' => 'Korean','zh-ch' => 'Chinese','zh-tw' => 'Taiwanese','ar' => 'Arabic (beta)');
 $GLOBALS['TL_LANG']['tl_timeline']['language']['field'][0] ='Sprache';
 $GLOBALS['TL_LANG']['tl_timeline']['language']['field'][1] ='Bitte wählen Sie die Sprache der Timeline';
-
-
 $GLOBALS['TL_LANG']['tl_timeline']['newsArchive']['readMore'] = 'weiterlesen...';
+
+
 /*
  * Fields
  */
@@ -36,6 +35,8 @@ $GLOBALS['TL_LANG']['tl_timeline']['overwriteIcon'][0] = 'Ein Standard-Icon ausw
 $GLOBALS['TL_LANG']['tl_timeline']['overwriteIcon'][1] = 'Wählen Sie ein Standardicon aus, welches angezeigt wird - sofern die Datenquellen kein Icon liefern';
 $GLOBALS['TL_LANG']['tl_timeline']['iconSRC'][0] = 'Quelldatei';
 $GLOBALS['TL_LANG']['tl_timeline']['iconSRC'][1] = 'Bitte wählen Sie ein Icon aus der Dateiübersicht aus.';
+
+
 /*
  *  Legenden
  */
@@ -43,6 +44,8 @@ $GLOBALS['TL_LANG']['tl_timeline']['title_legend'] = 'Titel';
 $GLOBALS['TL_LANG']['tl_timeline']['slide1_legend'] = 'Inhalt der ersten Slide';
 $GLOBALS['TL_LANG']['tl_timeline']['image_legend'] = 'Bild-Einstellungen';
 $GLOBALS['TL_LANG']['tl_timeline']['icon_legend'] = 'Icon-Einstellungen';
+
+
 /*
  * Bearbeitungsfelder
  */
@@ -68,3 +71,5 @@ $GLOBALS['TL_LANG']['tl_timeline']['editmeta'][0] = 'Timeline bearbeiten';
 $GLOBALS['TL_LANG']['tl_timeline']['editmeta'][1] = 'Die Timeline bearbeiten';
 $GLOBALS['TL_LANG']['tl_timeline']['pasteafter'][0] = 'In dieses Nachrichtenarchiv einfügen';
 $GLOBALS['TL_LANG']['tl_timeline']['pasteafter'][1] = 'Nach der Timeline ID %s einfügen';
+
+?>
